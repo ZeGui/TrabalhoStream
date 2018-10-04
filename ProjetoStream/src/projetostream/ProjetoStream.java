@@ -20,7 +20,7 @@ public class ProjetoStream {
     private static ArrayList<Pessoa> pessoasC
             = new ArrayList<>();
     
-    private static ArrayList<Famoso> famososC
+    private static ArrayList<Elenco> famososC
             = new ArrayList<>();
     
     private static ArrayList<Filmes> filmesC
@@ -45,8 +45,8 @@ public class ProjetoStream {
     }
     
     public void insereAstro(int i, String nome, String funcao, char sexo, String nomePersonagem){
-        Famoso novoF = new Famoso();
-        Famoso novoA = new Atores();
+        Elenco novoF = new Elenco();
+        Elenco novoA = new Atores();
         if(i == 0){
             novoF.setNome(nome);
             novoF.setFuncao(funcao);
@@ -61,18 +61,35 @@ public class ProjetoStream {
         }
     }
     
-    public void insereFilme(String titulo, String genero, int classificacao, double duracao, String tipo,
-            Famoso elenco){
+    public Elenco procuraElenco(String nome){
+        if(famososC != null){
+            for(Elenco e: famososC){
+                if(e.getNome().equalsIgnoreCase(nome)){
+                    return e;
+                }
+            }
+        }
+        return null;
+    }
+    
+    public void insereFilme(String titulo, int ano, String genero, int classificacao,
+            double duracao, String tipo, ArrayList<Elenco> elenco){
         Filmes novo = new Filmes();
         if(famososC != null){
-            novo.
+            novo.setTitulo(titulo);
+            novo.setAno(ano);
+            novo.setGenero(genero);
+            novo.setClassifica(classificacao);
+            novo.setDuracao(duracao);
+            novo.setTipo(tipo);
+            novo.setElencoLista(elenco);
         }
     }
     
     public ArrayList<Pessoa> getListaClientes(){
         return pessoasC;
     }
-    public ArrayList<Famoso> getListaFamoso(){
+    public ArrayList<Elenco> getListaFamoso(){
         return famososC;
     }
     

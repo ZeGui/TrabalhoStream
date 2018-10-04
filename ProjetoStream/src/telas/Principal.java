@@ -34,6 +34,7 @@ public class Principal extends javax.swing.JFrame {
         btnListaClientes = new javax.swing.JButton();
         btnCadastraElenco = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        btnCadastraFilme = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,6 +66,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnCadastraFilme.setText("Cadastra Filmes");
+        btnCadastraFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastraFilmeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,7 +83,8 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(btnTelaCadastro)
                     .addComponent(btnListaClientes)
                     .addComponent(btnCadastraElenco)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(btnCadastraFilme))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -89,7 +98,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnCadastraElenco)
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnCadastraFilme)
+                .addContainerGap(226, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -132,6 +143,12 @@ public class Principal extends javax.swing.JFrame {
         novo.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void btnCadastraFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastraFilmeActionPerformed
+        // TODO add your handling code here:
+        JFrame novo = new CadastraFilme();
+        novo.setVisible(true);
+    }//GEN-LAST:event_btnCadastraFilmeActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -169,6 +186,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastraElenco;
+    private javax.swing.JButton btnCadastraFilme;
     private javax.swing.JButton btnListaClientes;
     private javax.swing.JButton btnTelaCadastro;
     private javax.swing.JButton jButton1;

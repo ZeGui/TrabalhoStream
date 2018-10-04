@@ -17,10 +17,10 @@ import atros.*;
  */
 public class ElencoDataModel extends AbstractTableModel{
 
- private ArrayList<Famoso> famosos;
+ private ArrayList<Elenco> famosos;
     private String colunas[] = {"Nome","Função", "Sexo", "Nome Personagem"};
     
-    public ElencoDataModel(ArrayList<Famoso> a){
+    public ElencoDataModel(ArrayList<Elenco> a){
         this.famosos = a; 
     }
     
@@ -41,7 +41,7 @@ public class ElencoDataModel extends AbstractTableModel{
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex){
-        Famoso f = this.famosos.get(rowIndex); //To change body of generated methods, choose Tools | Templates.
+        Elenco f = this.famosos.get(rowIndex); //To change body of generated methods, choose Tools | Templates.
         
         
         switch (columnIndex){

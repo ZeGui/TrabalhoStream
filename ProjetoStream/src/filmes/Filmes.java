@@ -6,7 +6,7 @@
 package filmes;
 
 import java.util.ArrayList;
-import atros.Famoso;
+import atros.Elenco;
 
 /**
  *
@@ -14,11 +14,14 @@ import atros.Famoso;
  */
 public class Filmes {
     private String titulo;
+    private int ano;
     private String genero;
     private int classifica;
     private double duracao;
     private String tipo;
-    private ArrayList<Famoso> elenco
+    private static ArrayList<Elenco> elenco
+            = new ArrayList<>();
+    private static ArrayList<Integer> nota
             = new ArrayList<>();
 
     public String getTitulo() {
@@ -27,6 +30,14 @@ public class Filmes {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+    
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
     public String getGenero() {
@@ -61,11 +72,29 @@ public class Filmes {
         this.tipo = tipo;
     }
 
-    public ArrayList<Famoso> getElenco() {
-        return elenco;
+    public Elenco getElenco() {
+        for(Elenco f: elenco){
+            return f;
+        }
+        return null;
     }
 
-    public void setElenco(Famoso elenco) {
+    public void setElenco(Elenco elenco) {
+        this.elenco.add(elenco);
+    }
+    
+     public int getNota() {
+        for(Integer i: nota){
+            return i;
+        }
+        return 0;
+    }
+
+    public void setElenco(Integer i) {
+        this.nota.add(i);
+    }
+    
+    public void setElencoLista(ArrayList<Elenco> elenco){
         this.elenco = elenco;
     }
     

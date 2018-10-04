@@ -9,7 +9,7 @@ package atros;
  *
  * @author josel
  */
-public class Atores extends Famoso{
+public class Atores extends Elenco{
     private String nomePersonagem;
 
     public String getNomePersonagem() {
